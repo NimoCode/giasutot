@@ -17,7 +17,7 @@ function validateEmail(email: string): boolean {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, parentPhone, studentAge, subject, preferredTime } = body;
+    const { name, parentPhone, studentAge, subject, preferredTime, courseId } = body;
 
     // Validation
     const errors: string[] = [];
@@ -58,6 +58,16 @@ export async function POST(request: NextRequest) {
       },
     });
 
+    // Course names mapping for email subject
+    const courseNames: Record<string, string> = {
+      trial: "Gói học thử",
+      basic: "Gói cơ bản",
+      advanced: "Gói chuyên sâu",
+    };
+
+    // Get course name, default to "Gói học thử" if courseId is not provided or invalid
+    const courseName = (courseId && courseNames[courseId]) ? courseNames[courseId] : "Gói học thử";
+
     // Email content
     const emailHtml = `
       <!DOCTYPE html>
@@ -77,7 +87,7 @@ export async function POST(request: NextRequest) {
         <body>
           <div class="container">
             <div class="header">
-              <h2>🎓 Đăng ký học thử mới</h2>
+              <h2>🎓 Đăng ký ${courseName}</h2>
             </div>
             <div class="content">
               <div class="info-row">
@@ -112,8 +122,11 @@ export async function POST(request: NextRequest) {
       </html>
     `;
 
+    // Email subject - prioritize course name
+    let emailSubject = `🎓 Đăng ký ${courseName} - ${name}`;
+
     const emailText = `
-Đăng ký học thử mới
+Đăng ký ${courseName}
 
 Họ tên phụ huynh: ${name}
 Số điện thoại: ${parentPhone}
@@ -127,7 +140,7 @@ Thời gian đăng ký: ${new Date().toLocaleString("vi-VN")}
     const info = await transporter.sendMail({
       from: `"Gia Sư Tiếng Anh" <${process.env.SMTP_USER}>`,
       to: "nguyenducdufedev@gmail.com",
-      subject: `🎓 Đăng ký học thử mới - ${name}`,
+      subject: emailSubject,
       text: emailText,
       html: emailHtml,
     });
