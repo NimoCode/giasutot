@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-primary-50 via-white to-secondary-50;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(255, 154, 162, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(0, 135, 255, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 40% 20%, rgba(0, 195, 105, 0.05) 0%, transparent 50%);
+    background-size: 100% 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  body > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2.5 sm:px-6 sm:py-3 bg-gradient-to-r from-primary-200 to-primary-500 text-white text-sm sm:text-base font-semibold rounded-full shadow-soft hover:shadow-soft-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform, box-shadow;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2.5 sm:px-6 sm:py-3 bg-white text-primary-500 text-sm sm:text-base font-semibold rounded-full border-2 border-primary-300 hover:bg-primary-50 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform, background-color;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-soft hover:shadow-soft-lg;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform, box-shadow;
+  }
+
+  .section-container {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16;
+  }
+
+  .heading-1 {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight;
+  }
+
+  .heading-2 {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900;
+  }
+
+  .heading-3 {
+    @apply text-xl sm:text-2xl font-semibold text-gray-800;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Smooth reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-b from-primary-300 to-primary-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gradient-to-b from-primary-400 to-primary-600;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Smooth gradient animation */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  will-change: background-position;
+}
+
+/* Glow effect */
+.glow {
+  box-shadow: 0 0 20px rgba(255, 154, 162, 0.3);
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 30px rgba(255, 154, 162, 0.5);
+  transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: box-shadow;
+}
+
+/* Text gradient animation */
+.text-gradient-animated {
+  background: linear-gradient(
+    90deg,
+    #ff9aa2 0%,
+    #0087ff 50%,
+    #ff9aa2 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  will-change: background-position;
+}
+
+/* Decorative patterns */
+.bg-pattern-dots {
+  background-image: radial-gradient(circle, rgba(255, 154, 162, 0.15) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.bg-pattern-grid {
+  background-image: 
+    linear-gradient(rgba(255, 154, 162, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 154, 162, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  will-change: background-position;
+}
+
+/* Pulse glow */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 154, 162, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 154, 162, 0.6);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  will-change: box-shadow;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.float {
+  animation: float 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  will-change: transform;
+}
+
+/* GPU acceleration helpers */
+.gpu-accelerate {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Optimized transitions */
+.smooth-transition {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+.smooth-transform {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+

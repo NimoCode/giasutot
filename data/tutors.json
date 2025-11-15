@@ -1,0 +1,114 @@
+[
+  {
+    "id": "tutor-anh-01",
+    "name": "Nguyễn Thảo",
+    "avatar": "/assets/avatars/thao.webp",
+    "subjects": ["Tiếng Anh"],
+    "levels": ["Tiểu học", "Trung học cơ sở"],
+    "rating": 4.9,
+    "price_per_hour": 200000,
+    "short_bio": "Giáo viên tiếng Anh chuyên trẻ em, 5 năm kinh nghiệm. Phương pháp dạy vui nhộn, tương tác cao.",
+    "long_bio": "Tôi là Nguyễn Thảo, giáo viên tiếng Anh chuyên về đối tượng trẻ em với hơn 5 năm kinh nghiệm. Tôi tốt nghiệp Cử nhân Sư phạm Tiếng Anh và có chứng chỉ TESOL quốc tế.\n\nPhương pháp giảng dạy của tôi tập trung vào việc tạo môi trường học tập vui vẻ, thân thiện, khuyến khích trẻ tự tin giao tiếp. Tôi sử dụng nhiều trò chơi, bài hát, và hoạt động tương tác để giúp trẻ tiếp thu ngôn ngữ một cách tự nhiên.\n\nKết quả: Hơn 200 học sinh đã cải thiện đáng kể khả năng tiếng Anh, nhiều em đạt giải trong các cuộc thi tiếng Anh cấp trường và quận.",
+    "teaching_experience_years": 5,
+    "education": "Cử nhân Sư phạm Tiếng Anh - Đại học Sư phạm Hà Nội",
+    "sample_video_url": "",
+    "tags": ["Online", "Offline", "Phương pháp trò chơi", "Giao tiếp"],
+    "gallery_images": ["/assets/tutors/thao-1.webp"],
+    "contact": {
+      "email": "thao***@example.com",
+      "phone": "09****5678"
+    },
+    "availability": ["Thứ 2: 17:00-19:00", "Thứ 4: 17:00-19:00", "Thứ 7: 9:00-12:00"],
+    "location": "Hà Nội"
+  },
+  {
+    "id": "tutor-anh-02",
+    "name": "Trần Minh Anh",
+    "avatar": "/assets/avatars/minh-anh.webp",
+    "subjects": ["Tiếng Anh", "Toán"],
+    "levels": ["Tiểu học"],
+    "rating": 4.8,
+    "price_per_hour": 180000,
+    "short_bio": "Gia sư trẻ, năng động, chuyên dạy tiếng Anh và Toán cho học sinh tiểu học.",
+    "long_bio": "Xin chào! Tôi là Trần Minh Anh, gia sư trẻ với 3 năm kinh nghiệm dạy kèm cho học sinh tiểu học. Tôi tốt nghiệp loại giỏi ngành Ngôn ngữ Anh và có kinh nghiệm dạy cả tiếng Anh và Toán.\n\nTôi đặc biệt yêu thích làm việc với trẻ em, luôn kiên nhẫn và tạo không khí học tập thoải mái. Phương pháp của tôi là kết hợp học và chơi, giúp các em không cảm thấy áp lực mà vẫn đạt kết quả tốt.\n\nTôi có thể dạy cả online và offline, linh hoạt theo nhu cầu của phụ huynh.",
+    "teaching_experience_years": 3,
+    "education": "Cử nhân Ngôn ngữ Anh - Đại học Ngoại ngữ",
+    "sample_video_url": "",
+    "tags": ["Online", "Offline", "Tiểu học", "Đa môn"],
+    "gallery_images": ["/assets/tutors/minh-anh-1.webp"],
+    "contact": {
+      "email": "minhanh***@example.com",
+      "phone": "09****1234"
+    },
+    "availability": ["Thứ 3: 18:00-20:00", "Thứ 5: 18:00-20:00", "Chủ nhật: 14:00-17:00"],
+    "location": "Hà Nội"
+  },
+  {
+    "id": "tutor-anh-03",
+    "name": "Lê Hương Giang",
+    "avatar": null,
+    "subjects": ["Tiếng Anh"],
+    "levels": ["Trung học cơ sở", "Trung học phổ thông"],
+    "rating": 5.0,
+    "price_per_hour": 250000,
+    "short_bio": "Giáo viên tiếng Anh chuyên nghiệp, 8 năm kinh nghiệm, chuyên luyện thi và giao tiếp.",
+    "long_bio": "Tôi là Lê Hương Giang, giáo viên tiếng Anh với 8 năm kinh nghiệm giảng dạy. Tôi chuyên dạy cho học sinh THCS và THPT, đặc biệt là luyện thi vào cấp 3 và đại học.\n\nVới bằng Thạc sĩ Ngôn ngữ Anh và chứng chỉ IELTS 8.5, tôi có thể giúp học sinh cải thiện cả 4 kỹ năng: Nghe, Nói, Đọc, Viết. Tôi cũng có nhiều kinh nghiệm trong việc luyện thi các chứng chỉ quốc tế.\n\nPhương pháp của tôi là cá nhân hóa theo từng học sinh, tập trung vào điểm yếu và phát huy điểm mạnh. Tôi luôn cập nhật các phương pháp giảng dạy mới nhất.",
+    "teaching_experience_years": 8,
+    "education": "Thạc sĩ Ngôn ngữ Anh - Đại học Quốc gia Hà Nội",
+    "sample_video_url": "",
+    "tags": ["Online", "Luyện thi", "IELTS", "Giao tiếp nâng cao"],
+    "gallery_images": ["/assets/tutors/huong-giang-1.webp"],
+    "contact": {
+      "email": "giang***@example.com",
+      "phone": "09****9876"
+    },
+    "availability": ["Thứ 2: 19:00-21:00", "Thứ 4: 19:00-21:00", "Thứ 6: 19:00-21:00", "Thứ 7: 9:00-12:00"],
+    "location": "Hà Nội"
+  },
+  {
+    "id": "tutor-anh-04",
+    "name": "Phạm Đức Hùng",
+    "avatar": null,
+    "subjects": ["Tiếng Anh", "Vật lý"],
+    "levels": ["Trung học cơ sở"],
+    "rating": 4.7,
+    "price_per_hour": 220000,
+    "short_bio": "Gia sư nam, chuyên dạy tiếng Anh và Vật lý cho học sinh THCS, phương pháp dễ hiểu.",
+    "long_bio": "Chào các bạn! Tôi là Phạm Đức Hùng, gia sư với 4 năm kinh nghiệm. Tôi chuyên dạy tiếng Anh và Vật lý cho học sinh THCS.\n\nVới nền tảng kỹ thuật và ngôn ngữ, tôi có thể giải thích các khái niệm một cách dễ hiểu, kết hợp ví dụ thực tế. Tôi đặc biệt giỏi trong việc giúp học sinh yếu lấy lại căn bản và tự tin hơn.\n\nTôi thường sử dụng các ví dụ thực tế, thí nghiệm đơn giản và bài tập có tính ứng dụng cao để học sinh dễ nhớ và hứng thú hơn.",
+    "teaching_experience_years": 4,
+    "education": "Cử nhân Kỹ thuật - Đại học Bách khoa Hà Nội",
+    "sample_video_url": "",
+    "tags": ["Offline", "Đa môn", "Lấy lại căn bản"],
+    "gallery_images": ["/assets/tutors/duc-hung-1.webp"],
+    "contact": {
+      "email": "hung***@example.com",
+      "phone": "09****4321"
+    },
+    "availability": ["Thứ 3: 17:00-19:00", "Thứ 5: 17:00-19:00", "Chủ nhật: 9:00-12:00"],
+    "location": "Hà Nội"
+  },
+  {
+    "id": "tutor-anh-05",
+    "name": "Hoàng Thị Mai",
+    "avatar": null,
+    "subjects": ["Tiếng Anh"],
+    "levels": ["Tiểu học", "Trung học cơ sở"],
+    "rating": 4.9,
+    "price_per_hour": 190000,
+    "short_bio": "Giáo viên tiếng Anh yêu trẻ, chuyên dạy tiểu học và THCS, có chứng chỉ quốc tế.",
+    "long_bio": "Tôi là Hoàng Thị Mai, giáo viên tiếng Anh với 6 năm kinh nghiệm dạy trẻ em. Tôi có chứng chỉ TEFL và nhiều năm làm việc tại các trung tâm tiếng Anh uy tín.\n\nTôi đặc biệt yêu thích việc dạy trẻ em vì các em luôn mang lại năng lượng tích cực. Phương pháp của tôi là tạo môi trường an toàn, khuyến khích trẻ mắc lỗi và học từ lỗi đó. Tôi sử dụng nhiều tài liệu đa phương tiện, trò chơi tương tác.\n\nNhiều học sinh của tôi đã đạt thành tích tốt trong các kỳ thi tiếng Anh và tự tin giao tiếp với người nước ngoài.",
+    "teaching_experience_years": 6,
+    "education": "Cử nhân Sư phạm Tiếng Anh - Đại học Sư phạm, Chứng chỉ TEFL",
+    "sample_video_url": "",
+    "tags": ["Online", "Offline", "Chứng chỉ quốc tế", "Trẻ em"],
+    "gallery_images": ["/assets/tutors/mai-1.webp"],
+    "contact": {
+      "email": "mai***@example.com",
+      "phone": "09****2468"
+    },
+    "availability": ["Thứ 2: 18:00-20:00", "Thứ 4: 18:00-20:00", "Thứ 6: 18:00-20:00", "Thứ 7: 14:00-17:00"],
+    "location": "Hà Nội"
+  }
+]
+
+

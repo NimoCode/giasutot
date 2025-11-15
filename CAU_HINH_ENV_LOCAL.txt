@@ -1,0 +1,37 @@
+HƯỚNG DẪN ĐIỀN THÔNG TIN VÀO FILE .env.local
+=============================================
+
+File .env.local đã được tạo với template sẵn. Bạn chỉ cần:
+
+BƯỚC 1: Mở file .env.local trong thư mục gốc dự án
+
+BƯỚC 2: Điền RESEND_API_KEY
+
+1. Đăng ký tài khoản miễn phí tại: https://resend.com
+2. Đăng nhập và vào menu "API Keys"
+3. Click "Create API Key"
+4. Đặt tên: "Next.js App"
+5. Copy API Key (bắt đầu bằng "re_")
+6. Dán vào file .env.local thay thế: re_your_api_key_here
+
+Ví dụ sau khi điền:
+RESEND_API_KEY=re_AbCdEf1234567890
+
+BƯỚC 3: Kiểm tra RESEND_FROM_EMAIL
+
+- Mặc định: onboarding@resend.dev (đã sẵn sàng, không cần thay đổi)
+- Nếu muốn dùng email riêng, cần verify domain trong Resend trước
+
+BƯỚC 4: Khởi động lại server
+
+npm run dev
+
+=============================================
+
+LƯU Ý:
+- RESEND_API_KEY: BẮT BUỘC - Phải có API key từ Resend
+- RESEND_FROM_EMAIL: Tùy chọn - Có thể giữ nguyên onboarding@resend.dev
+
+Sau khi điền xong, form đăng ký sẽ tự động gửi email đến:
+nguyenducdufedev@gmail.com
+
