@@ -50,7 +50,7 @@ git config --global user.email "nguyenducdufedev@gmail.com"
 1. Đăng nhập GitHub: https://github.com
 2. Click nút **"+"** góc trên bên phải > **"New repository"**
 3. Điền thông tin:
-   - **Repository name**: `web_gs` (hoặc tên bạn muốn)
+   - **Repository name**: `giasutot` (hoặc tên bạn muốn)
    - **Description**: `Landing page gia sư tiếng Anh` (tùy chọn)
    - **Visibility**: 
      - Chọn **Public** (miễn phí, ai cũng xem được)
@@ -62,8 +62,8 @@ git config --global user.email "nguyenducdufedev@gmail.com"
 
 Sau khi tạo xong, GitHub sẽ hiển thị URL, copy URL này:
 
-- **HTTPS**: `https://github.com/username/web_gs.git`
-- **SSH**: `git@github.com:username/web_gs.git` (cần cấu hình SSH key)
+- **HTTPS**: `https://github.com/username/giasutot.git`
+- **SSH**: `git@github.com:username/giasutot.git` (cần cấu hình SSH key)
 
 Dùng **HTTPS** cho dễ (không cần cấu hình thêm).
 
@@ -75,7 +75,7 @@ Dùng **HTTPS** cho dễ (không cần cấu hình thêm).
 
 **Hoặc:**
 ```bash
-cd "C:\Users\Nguyen Duc Du\Desktop\web_gs"
+cd "C:\Users\Nguyen Duc Du\Desktop\giasutot"
 ```
 
 ### Bước 4: Khởi tạo Git (nếu chưa có)
@@ -173,7 +173,7 @@ git commit -m "Initial commit: Landing page gia sư tiếng Anh"
 
 ```bash
 # Thêm remote repository
-git remote add origin https://github.com/username/web_gs.git
+git remote add origin https://github.com/NimoCode/giasutot.git
 
 # Đổi tên branch thành main (nếu cần)
 git branch -M main
@@ -190,7 +190,7 @@ git push -u origin main
 
 ### Bước 8: Kiểm tra
 
-1. Truy cập: `https://github.com/username/web_gs`
+1. Truy cập: `https://github.com/username/giasutot`
 2. Xem code đã được push lên chưa
 3. Nếu thấy tất cả file = **Thành công!** ✅
 
@@ -204,7 +204,7 @@ git push -u origin main
 2. Click **"New project"** hoặc **"+"** > **"New project/repository"**
 3. Chọn **"Create blank project"**
 4. Điền thông tin:
-   - **Project name**: `web_gs`
+   - **Project name**: `giasutot`
    - **Visibility Level**: 
      - **Public** (miễn phí)
      - **Private** (miễn phí cho cá nhân)
@@ -215,8 +215,8 @@ git push -u origin main
 
 Copy URL hiển thị sau khi tạo project:
 
-- **HTTPS**: `https://gitlab.com/username/web_gs.git`
-- **SSH**: `git@gitlab.com:username/web_gs.git`
+- **HTTPS**: `https://gitlab.com/username/giasutot.git`
+- **SSH**: `git@gitlab.com:username/giasutot.git`
 
 ### Bước 3-7: Tương tự như GitHub
 
@@ -229,7 +229,7 @@ git add .
 git commit -m "Initial commit: Landing page gia sư tiếng Anh"
 
 # Kết nối với GitLab
-git remote add origin https://gitlab.com/username/web_gs.git
+git remote add origin https://gitlab.com/username/giasutot.git
 git branch -M main
 git push -u origin main
 ```
@@ -245,7 +245,7 @@ git push -u origin main
 1. Đăng nhập Bitbucket: https://bitbucket.org
 2. Click **"+"** > **"Repository"**
 3. Điền thông tin:
-   - **Repository name**: `web_gs`
+   - **Repository name**: `giasutot`
    - **Access level**: 
      - **Public** (ai cũng xem được)
      - **Private** (chỉ bạn xem được, miễn phí)
@@ -256,8 +256,8 @@ git push -u origin main
 
 Copy URL hiển thị:
 
-- **HTTPS**: `https://username@bitbucket.org/username/web_gs.git`
-- **SSH**: `git@bitbucket.org:username/web_gs.git`
+- **HTTPS**: `https://username@bitbucket.org/username/giasutot.git`
+- **SSH**: `git@bitbucket.org:username/giasutot.git`
 
 ### Bước 3-7: Tương tự như GitHub
 
@@ -270,7 +270,7 @@ git add .
 git commit -m "Initial commit: Landing page gia sư tiếng Anh"
 
 # Kết nối với Bitbucket
-git remote add origin https://username@bitbucket.org/username/web_gs.git
+git remote add origin https://username@bitbucket.org/username/giasutot.git
 git branch -M main
 git push -u origin main
 ```
@@ -321,7 +321,7 @@ git remote -v
 git remote remove origin
 
 # Thêm remote mới
-git remote add origin https://github.com/username/web_gs.git
+git remote add origin https://github.com/username/giasutot.git
 ```
 
 ### Lỗi 2: "failed to push some refs"
@@ -367,7 +367,7 @@ pwd  # Linux/Mac
 cd   # Windows PowerShell
 
 # Chuyển đến thư mục dự án
-cd "C:\Users\Nguyen Duc Du\Desktop\web_gs"
+cd "C:\Users\Nguyen Duc Du\Desktop\giasutot"
 
 # Khởi tạo Git
 git init

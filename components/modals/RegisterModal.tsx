@@ -20,6 +20,17 @@ export default function RegisterModal({
   tutorId,
   tutorName,
 }: RegisterModalProps) {
+  // Course names mapping (must match API route)
+  const courseNames: Record<string, string> = {
+    trial: "Gói học thử",
+    basic: "Gói cơ bản",
+    advanced: "Gói chuyên sâu",
+  };
+
+  // Get course name for display - default to "Gói học thử" if no course selected
+  const courseId = selectedCourse || "trial";
+  const courseName = courseNames[courseId] || "Gói học thử";
+
   const [formData, setFormData] = useState({
     name: "",
     parentPhone: "",
@@ -123,7 +134,7 @@ export default function RegisterModal({
         },
         body: JSON.stringify({
           ...formData,
-          courseId: selectedCourse || "trial",
+          courseId: courseId,
           tutorId: tutorId || null,
           tutorName: tutorName || null,
         }),
@@ -156,7 +167,7 @@ export default function RegisterModal({
           const lead = {
             id: `lead-${Date.now()}`,
             ...formData,
-            courseId: selectedCourse || "trial",
+            courseId: courseId,
             createdAt: new Date().toISOString(),
           };
           const existingLeads = JSON.parse(localStorage.getItem("leads") || "[]");
@@ -219,7 +230,7 @@ export default function RegisterModal({
           >
             <div className="bg-white/95 backdrop-blur-xl rounded-xl sm:rounded-2xl shadow-soft-lg border border-white/20 max-w-md w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto">
               <div className="sticky top-0 bg-white border-b border-gray-200 px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
-                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">Đăng ký học thử</h2>
+                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">Đăng ký {courseName}</h2>
                 <button
                   onClick={onClose}
                   className="p-2 hover:bg-gray-100 rounded-full transition-colors"
