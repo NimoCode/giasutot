@@ -50,6 +50,18 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Check if from email is configured
+    const fromEmail = process.env.RESEND_FROM_EMAIL;
+    if (!fromEmail) {
+      return NextResponse.json(
+        { 
+          success: false, 
+          errors: ["Email sender chưa được cấu hình. Vui lòng thêm RESEND_FROM_EMAIL trong Environment Variables. Email phải được verify trong Resend."]
+        },
+        { status: 500 }
+      );
+    }
+
     // Initialize Resend
     const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -144,8 +156,9 @@ Thời gian đăng ký: ${new Date().toLocaleString("vi-VN")}
     `;
 
     // Send email using Resend
+    // Note: fromEmail must be verified in Resend account
     const { data, error } = await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev",
+      from: fromEmail,
       to: "nguyenducdufedev@gmail.com",
       subject: emailSubject,
       text: emailText,
