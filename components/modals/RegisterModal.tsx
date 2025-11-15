@@ -111,9 +111,12 @@ export default function RegisterModal({
     setErrors({});
 
     try {
-      // Send to API (default: Resend - easier than SMTP)
-      // If RESEND_API_KEY is set, use Resend API, otherwise use SMTP
-      const response = await fetch("/api/register-resend", {
+      // Check which email service to use (Resend or SMTP)
+      const useResend = process.env.NEXT_PUBLIC_USE_RESEND === "true";
+      const apiEndpoint = useResend ? "/api/register-resend" : "/api/register";
+      
+      // Send to API
+      const response = await fetch(apiEndpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

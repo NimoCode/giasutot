@@ -37,7 +37,11 @@ export default function ContactForm({ tutorId, tutorName }: ContactFormProps) {
 
     try {
       // Send to API with tutor information
-      const response = await fetch("/api/register-resend", {
+      // Check which email service to use (Resend or SMTP)
+      const useResend = process.env.NEXT_PUBLIC_USE_RESEND === "true";
+      const apiEndpoint = useResend ? "/api/register-resend" : "/api/register";
+      
+      const response = await fetch(apiEndpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
